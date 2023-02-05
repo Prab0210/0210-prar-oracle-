@@ -8,3 +8,14 @@ values
  500054
 );
 commit;
+
+Insert into customer 
+values 
+(
+ 14324744,
+'Ramesh',
+'15-Oct-2003',
+ 'Chennai',
+ 600014
+);
+commit;
