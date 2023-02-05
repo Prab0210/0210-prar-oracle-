@@ -1,0 +1,10 @@
+Insert into customer 
+values 
+(
+ 14324743,
+'Babu',
+'21-Sep-2005',
+ 'Banglore',
+ 500054
+);
+commit;
