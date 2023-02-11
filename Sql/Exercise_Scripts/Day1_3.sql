@@ -72,7 +72,7 @@ DROP LAST_NAME;
 --Delete the patient only who has born after the year of 2000 from the patient table.
 
 DELETE FROM PATIENT
-WHERE DOB >  TO_DATE( '01/01/2000', 'MM/DD/YYYY');
+WHERE DOB >  TO_DATE( '12/31/2000', 'MM/DD/YYYY');
 
 COMMIT;
 
