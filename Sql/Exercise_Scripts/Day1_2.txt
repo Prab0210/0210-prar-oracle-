@@ -1,0 +1,98 @@
+/* Question 1 */
+create table parts
+(
+ID 			varchar2(10),
+Color		Varchar2(20),
+Weight		Number(4,2)	
+)
+;
+
+/* Inserting Records into Parts Table*/
+
+Insert into PARTS values ('AB123', 'Blue', 10.5);
+commit;
+Insert into PARTS values ('CD456', 'Red', 8.0);
+commit;
+Insert into PARTS values ('EF789', 'Green', 9.25);
+commit;
+Insert into PARTS values ('GH012', 'Yellow', 8.0);
+commit;
+Insert into PARTS values ('IJ341', 'Blue', 1.0);
+commit;
+
+/* Adding a column ‘description’ in the Parts table*/
+
+ALTER TABLE parts
+ADD Description varchar2(1000);
+
+/* Removing column color*/
+
+ALTER TABLE parts
+DROP column color;
+
+/* Creating Table Investments*/
+
+create table Investments
+(
+ID					number(3),
+Name				varchar2(100),
+Email				varchar2(100),
+Investments			varchar2(100)
+);
+
+/* Inserting into Table Investments*/
+
+Insert into Investments values (231, 'Albert Master', 'albert.master@gmail.com', 'Bonds');
+commit;
+Insert into Investments values (210, 'Alfred Allan', 'aalan@gmail.com', 'Stocks');
+commit;
+Insert into Investments values (256, 'Alison Smart', 'asmart@biztalk.com', 'Residential Property');
+commit;
+Insert into Investments values (211, 'Ally Emery', 'allye@easymail.com', 'Stocks');
+commit;
+
+/* Creating Table Products*/
+
+create table Ex_Products
+(
+Product_ID			number(3),
+Color				varchar2(20),
+Price				number (8,2)
+);
+
+/* Inserting into Table Products*/
+
+Insert into  Ex_Products values (1, 'Red', 15.99);
+commit;
+Insert into  Ex_Products values (1, 'Yellow', 15.99);
+commit;
+Insert into  Ex_Products values (2, 'Yellow', 23.99);
+commit;
+Insert into  Ex_Products values (3, 'Green', 17.50);
+commit;
+Insert into  Ex_Products values (4, 'Yellow', 9.99);
+commit;
+Insert into  Ex_Products values (4, 'Blue', 9.99);
+commit;
+Insert into  Ex_Products values (5, 'Red', 29.99);
+commit;
+
+
+/* Creating Table VENDOR*/
+CREATE TABLE VENDOR
+(
+VENDOR_ID   NUMBER  PRIMARY KEY,
+REGION      VARCHAR2(50),
+NAME        VARCHAR2(50)
+);
+
+/* Creating Table Two_Customer*/
+
+Create Table Two_Customer
+(
+Customer_ID		NUMBER  PRIMARY KEY,
+vendor_ID		NUMBER  references vendor(vendor_id),
+Cust_Name		VARCHAR2(50),
+Address			VARCHAR2(100),
+REGION			VARCHAR2(50)
+);
